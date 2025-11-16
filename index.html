@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coming Soon</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0d1117, #1a2430);
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  background: linear-gradient(90deg, #00eaff, #6a5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideDown 1.4s ease forwards, glow 3s ease-in-out infinite alternate;
+}
+
+.subtitle {
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0;
+  animation: fadeUp 1.8s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00eaff33; }
+  to { text-shadow: 0 0 25px #00eaff88; }
+}
+</style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">COMING SOON</div>
+    <div class="subtitle">Our website is under construction.</div>
+  </div>
+</body>
+</html>
